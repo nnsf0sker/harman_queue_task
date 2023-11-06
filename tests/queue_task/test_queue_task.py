@@ -21,7 +21,7 @@ MAX_RESOURCES = Resources(
 
 
 def test_task_queue():
-    task_queue = TaskQueue(1024, 1024, 1024)
+    task_queue = TaskQueue(MAX_CPU_CORES, MAX_GPU_CORES, MAX_RAM)
 
     top_task = Task(0, 2, Resources(ram=1, cpu_cores=1, gpu_count=1), "", "")
     mid_task = Task(0, 1, Resources(ram=1, cpu_cores=1, gpu_count=1), "", "")
